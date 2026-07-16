@@ -1,0 +1,301 @@
+/* =========================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* =========================================
+   2. BARRA DE NAVEGAÇÃO (NAV) - VERMELHA
+   ========================================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background-color: #8b0000; /* Vermelho escuro elegante */
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff !important; /* Nome Dra. Maria Caroline em Branco */
+    line-height: 1;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaço entre o símbolo e o nome */
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff !important;
+}
+.logo-texto {
+    display: flex;
+    flex-direction: column; /* Coloca um texto embaixo do outro */
+    line-height: 1.2;
+}
+
+.nome {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.especialidades {
+    font-size: 12px; /* Letra menor para não brigar com o nome */
+    font-weight: 400;
+    color: #ffcccc; /* Um tom de vermelho bem clarinho ou branco com opacidade */
+    text-transform: uppercase; /* Deixa em letras maiúsculas, fica bem profissional */
+    letter-spacing: 1px;
+}
+
+.simbolo-monograma {
+    /* Mantém aquele estilo do círculo que criamos antes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcccc; /* Leve destaque ao passar o mouse */
+}
+
+/* =========================================
+   3. SEÇÃO PRINCIPAL (HERO) - COM SUA FOTO
+   ========================================= */
+.hero {
+    min-height: 75vh;
+    /* Fundo com a foto da justiça escurecida (preto fumê, sem azul) */
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+                url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 8%;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px; /* Espaço entre sua foto e o texto */
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Estilo da sua Foto Profissional */
+.hero-image img {
+    width: 320px; 
+    height: 320px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%; /* Foto Redonda */
+    border: 5px solid #8b0000; /* Borda vermelha combinando com o topo */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Textos da Parte Principal (Onde estava pequeno) */
+.hero-content {
+    flex: 1;
+    text-align: left;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px; /* Título bem grande e imponente */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 24px; /* Texto da descrição agora bem grande e visível */
+    line-height: 1.4;
+    margin-bottom: 35px;
+    color: #f8f8f8;
+}
+.card-link {
+    text-decoration: none !important; /* O !important garante que nenhum outro estilo force o sublinhado */
+    color: inherit; /* Mantém a cor do texto original do seu site */
+}
+
+/* Botão do WhatsApp */
+.btn-whatsapp {
+    background-color: #25d366;
+    color: white;
+    padding: 18px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   4. QUADROS DE ESPECIALIDADES (CARDS)
+   ========================================= */
+#areas {
+    padding: 50px 8%;
+    background-color: #f4f4f4; /* Fundo cinza claro para os cards aparecerem */
+    text-align: center;
+}
+
+#areas h2 {
+    margin-bottom: 50px;
+    font-size: 38px;
+    color: #1a2a3a;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-top: 6px solid #8b0000; /* Linha vermelha no topo do card */
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 45px;
+    color: #8b0000;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 24px;
+    color: #1a2a3a;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* =========================================
+   5. RESPONSIVIDADE (PARA CELULAR)
+   ========================================= */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column; /* coloca a foto em cima do texto */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero h1 { font-size: 36px; }   /* Diminui o titulo no celular */
+    .hero p { font-size: 20px; }
+
+    .hero-image img {   /* Diminui a foto no celular */
+        width: 200px;
+        height: 200px;
+    }
+}
+/* =========================================
+   6. RODAPÉ (FOOTER) - AZUL COM DETALHE VERMELHO
+   ========================================= */
+footer {
+    background-color: #8b0000; /* Vermelho */
+    color: #ffffff;            /* Texto Branco */
+    text-align: center;
+    padding: 20px 5%;          /* Mais espaço interno para ficar imponente */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border-top: 5px solid #8b0000; /* Linha Vermelha no topo do rodapé */
+}
+
+footer h3, footer p {
+    color: #ffffff; /* Garante a cor branca em titulos e parágrafos do rodapé */
+}
+/* Ajuste do botão dentro do rodapé */
+footer .btn-whatsapp {
+    margin-top: 20px;
+    background-color: #25d366;
+}
+/* remove o azul e o sublinhado do link de e-mail no rodapé */
+footer a {
+    color: #ffffff !important;      /* Força o e-mail a ficar branco */
+    text-decoration: none !important; /* Remove o sublinhado */
+    font-weight: bold;              /* Opcional: deixa o e-mail em negrito para destacar */
+    transition: 0.3s;
+}
+
+/* Efeito opcional: quando o usuário passar o mouse no e-mail */
+footer a:hover {
+    color: #ffcccc !important;      /* Fica em um tom de vermelho bem claro, combinando com o menu */
+}

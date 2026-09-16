@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="j2Q6IBw9rtTehp-i5zuo18M9Jo25LTjORhiewqqmrpo" />
-    
     <title>Revisão de Contratos Bancários | Maria Caroline de Sousa</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
-    
     <style>
         :root {
             --primary-color: #0f2027; /* Azul escuro corporativo/jurídico */
@@ -183,6 +180,21 @@
             margin-top: 0;
         }
 
+        .container-imagem {
+            display: flex;
+            justify-content: center;
+            padding: 40px 0; /* Dá um espaço em cima e embaixo da imagem */
+            background-color: var(--light-bg); /* Opcional: mantém o fundo alinhado com a seção de serviços */
+        }
+
+        .container-imagem img {
+            max-width: 600px; /* Controla o tamanho máximo da imagem */
+            width: 100%;       /* Garante que ela seja responsiva no celular */
+            height: auto;      /* Mantém a proporção original */
+            border-radius: 8px; /* Opcional: arredonda levemente as bordas */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Opcional: dá um efeito de profundidade */
+        }
+
         /* Seção Informativa */
         .conteudo-info {
             padding: 60px 0;
@@ -253,6 +265,10 @@
             <a href="https://wa.me/5513997059023" class="btn-cta" target="_blank">Fazer uma Análise Gratuita</a>
         </div>
     </header>
+
+<div class="container-imagem">
+    <img src="faturas.jpg" alt="Imagem ilustrativa de dívidas e contratos bancários">
+</div> 
 
 <!-- 3. O que pode ser revisado (Serviços) -->
     <section class="servicos">
